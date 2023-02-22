@@ -8,7 +8,7 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
-static HELLO: &[u8] = b"ep_os: Ciao Elenuccia, stai tranquilla per l'esame ok?";
+static HELLO: &[u8] = b"ep_os: 22-02-2023 ecco il tuo sistema operativo personale <3. E.M.";
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
