@@ -1,2 +1,2 @@
-# epOS
+# ep_os
 learning os in Rust.
