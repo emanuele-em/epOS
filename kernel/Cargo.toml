@@ -1,0 +1,37 @@
+[package]
+name = "kernel"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bootloader_api = "0.11.0"
+spin = "0.5.2"
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
+
+[dependencies.noto-sans-mono-bitmap]
+version = "0.2.0"
+default-features = false
+features = [
+    "regular",
+    "size_16",
+    "unicode-basic-latin",
+    # required for the fallback char '�'
+    "unicode-specials",
+]
+
+[unstable]
+build-std-features = ["compiler-builtins-mem"]
+build-std = ["core", "compiler_builtins"]
+
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+

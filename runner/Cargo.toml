@@ -1,0 +1,6 @@
+[package]
+name = "runner"         # or any other name
+version = "0.1.0"
+
+[dependencies]
+bootloader = "0.11"
